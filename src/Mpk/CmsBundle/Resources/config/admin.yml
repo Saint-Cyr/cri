@@ -1,0 +1,67 @@
+services:
+#    sonata.admin.post:
+#        class: Mpk\CmsBundle\Admin\ArticleAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Article" }
+#        arguments:
+#            - ~
+#            - Mpk\CmsBundle\Entity\Article
+#            - ~
+#        calls:
+#            - [ setTranslationDomain, [MpkCmsBundle]]
+#            
+#    sonata.admin.header:
+#        class: Mpk\CmsBundle\Admin\HeaderAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Header" }
+#        arguments:
+#            - ~
+#            - Mpk\CmsBundle\Entity\Header
+#            - ~
+#        calls:
+#            - [ setTranslationDomain, [MpkCmsBundle]]
+#            
+#    sonata.admin.footer:
+#        class: Mpk\CmsBundle\Admin\FooterAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Footer" }
+#        arguments:
+#            - ~
+#            - Mpk\CmsBundle\Entity\Footer
+#            - ~
+#        calls:
+#            - [ setTranslationDomain, [MpkCmsBundle]]
+#            
+#    sonata.admin.menu:
+#        class: Mpk\CmsBundle\Admin\MenuAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Menu Items" }
+#        arguments:
+#            - ~
+#            - Mpk\CmsBundle\Entity\Menu
+#            - ~
+#        calls:
+#            - [ setTranslationDomain, [MpkCmsBundle]]
+    mpk_cms.admin.member:
+        class: Mpk\CmsBundle\Admin\MemberAdmin
+        arguments: [~, Mpk\CmsBundle\Entity\Member, MpkCmsBundle:MemberAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Member}
+
+    mpk_cms.admin.due:
+        class: Mpk\CmsBundle\Admin\DueAdmin
+        arguments: [~, Mpk\CmsBundle\Entity\Due, MpkCmsBundle:DueAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Dues}
+
+    mpk_cms.admin.church:
+        class: Mpk\CmsBundle\Admin\ChurchAdmin
+        arguments: [~, Mpk\CmsBundle\Entity\Church, MpkCmsBundle:ChurchAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Church}
+
+    mpk_cms.admin.convenant_family:
+        class: Mpk\CmsBundle\Admin\ConvenantFamilyAdmin
+        arguments: [~, Mpk\CmsBundle\Entity\ConvenantFamily, MpkCmsBundle:ConvenantFamilyAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: ConvenantFamily}
